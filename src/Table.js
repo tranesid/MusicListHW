@@ -1,15 +1,18 @@
 import React from "react";
-import Songs from "./Songs";
+import { Button, Table } from "semantic-ui-react";
 
-class MusicList {
-
-renderMusicList=()=>{
-  // return this.props.songs.map(s=> )
+class Chart extends React.Component {
+  render() {
+    return (
+      <Table.Row>
+        <Table.Cell>{this.props.name}</Table.Cell>
+        <Table.Cell>{this.props.artist}</Table.Cell>
+        <Table.Cell>
+          <Button color="red">Delete</Button>
+        </Table.Cell>
+      </Table.Row>
+    );
+  }
 }
-render() {
-  return (
-    <Songs />
-  );
-}};
+export default Chart;
 
-export default MusicList;
